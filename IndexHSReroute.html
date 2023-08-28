@@ -9,11 +9,11 @@
 <body>
     <script>
 		const urlParams = new URLSearchParams(window.location.search);
+		const command = urlParams.get('command');
 		const arg1 = urlParams.get('arg1');
-		const arg2 = urlParams.get('arg2');
 
 		// Form the new URL
-		const newUrl = "https://example.com/redirect?param1=" + arg1 + "&param2=" + arg2;
+		const newUrl = "drone://console/"+command+"="+arg1
 
 		// Redirect to the new URL
 		window.location.href = newUrl;
