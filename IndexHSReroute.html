@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Redirect</title>
+</head>
+<body>
+    <script>
+		const urlParams = new URLSearchParams(window.location.search);
+		const arg1 = urlParams.get('arg1');
+		const arg2 = urlParams.get('arg2');
+
+		// Form the new URL
+		const newUrl = "https://example.com/redirect?param1=" + arg1 + "&param2=" + arg2;
+
+		// Redirect to the new URL
+		window.location.href = newUrl;
+	</script>
+</body>
+</html>
