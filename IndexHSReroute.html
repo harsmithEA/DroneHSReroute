@@ -17,6 +17,13 @@
 
 		// Redirect to the new URL
 		window.location.href = newUrl;
+		function closeWindowWithDelay(milli) {
+			setTimeout(function() {
+			window.close();
+			}, milli);
+		}
+	    	// Wait for 3 seconds (3000 milliseconds)
+	    	closeWindowWithDelay(3000);
 	</script>
 </body>
 </html>
